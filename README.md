@@ -1,24 +1,27 @@
-# Tarea 1  
+# Tarea 5  
 ## Temas    
--Texto en el AppBar.  
--Icons y Text de diferentes tamaños.  
--Distribuir elementos en una Row.  
--Contorno cuadrado.  
--Padding y márgenes.  
+-Utilizar Colores  
+-Utilizar iconos 
+-Utilizar containers con esquinas redondeadas y colores.  
+-Utilizar textos con style.  
+-Utilizar TextFields con su controller.  
+-Utilizar paddings  
+-Utilizar columnas y filas y sus alineaciones
 
 ## Lo que mas me costo trabajo  
-Lo que más me costó trabajo fue hacer que los botones se cambiaran de color cuando se les hacia click y se quedaran con el color de indigo hasta que ocurriera un nuevo click. También me costó trabajo el alinear los íconos como aparecía en el documento de la tarea.  
+Lo que más me costó trabajo fue hacer que el checkbox registrara el cambio como yo quería. Estaba tratando de utilizar una variable pública para controlar si estaba seleccionado o no. Hice un cambio y puse una variable y un get en el provider para manejar el estado del checkbox.  
   
 ## Lo que aprendí  
-Aprendí a utilizar widgets como row, column a cambiar los estados de íconos, a alinear los widgets.  
+Aprendí sobre manejo de estados y a implementar provider.  
 
 ## Video de la app funcionando:  
-https://youtu.be/hVGa37RmRTI
+https://youtu.be/K1DVRrlbWwg
 
 ## Screenshots de la aplicación  
-![image](https://github.com/josefranciscogv/PMD_T1/assets/60234623/d4b05337-db18-40b9-81e0-41ca44e4206e)  
-![image](https://github.com/josefranciscogv/PMD_T1/assets/60234623/1235a497-cc6b-4023-bcd5-49ae1a1c8cc4)  
-![image](https://github.com/josefranciscogv/PMD_T1/assets/60234623/1a29e76d-5bbb-438c-97f6-aca2d71164e1)
-![image](https://github.com/josefranciscogv/PMD_T1/assets/60234623/41018820-5293-4761-a46d-643300737a36)  
-![image](https://github.com/josefranciscogv/PMD_T1/assets/60234623/2d4f171c-01a5-4b97-9e8e-7c7e40987e58)    
-![image](https://github.com/josefranciscogv/PMD_T1/assets/60234623/dcec0b96-a01d-4e41-ac86-04988e738aab)
+<img width="320" alt="image" src="https://github.com/josefranciscogv/PMD_T5/assets/60234623/6e58f232-7b05-4951-9745-1acbf0b84799">
+<img width="319" alt="image" src="https://github.com/josefranciscogv/PMD_T5/assets/60234623/396cf52b-b4cb-41f6-a96d-b8efd909d461">
+<img width="320" alt="image" src="https://github.com/josefranciscogv/PMD_T5/assets/60234623/a86e7ff8-b297-434e-8f41-642fc19fa424">
+<img width="321" alt="image" src="https://github.com/josefranciscogv/PMD_T5/assets/60234623/76dcee58-bd7c-4c30-ba5f-f0c3389b0217">
+<img width="321" alt="image" src="https://github.com/josefranciscogv/PMD_T5/assets/60234623/03f100e6-9b10-4929-920f-c0f9b6a2133a">
+
+
