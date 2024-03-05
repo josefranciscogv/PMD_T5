@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:forage_app/home_page.dart';
+import 'package:forage_app/providers/forage_provider.dart';
+import 'package:provider/provider.dart';
 
 class FormsPage extends StatefulWidget {
   const FormsPage({Key? key}) : super(key: key);
@@ -28,6 +31,7 @@ class _FormsPageState extends State<FormsPage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               TextField(
+                controller: context.watch<ForageProvider>().getNameController,
                 decoration: InputDecoration(
                   labelText: 'Name',
                   filled: true,
@@ -42,6 +46,8 @@ class _FormsPageState extends State<FormsPage> {
               ),
               SizedBox(height: 10),
               TextField(
+                controller:
+                    context.watch<ForageProvider>().getLocationController,
                 decoration: InputDecoration(
                   labelText: 'Location',
                   filled: true,
@@ -57,7 +63,14 @@ class _FormsPageState extends State<FormsPage> {
               SizedBox(height: 10),
               Row(
                 children: [
-                  Checkbox(value: false, onChanged: (bool? value) {}),
+                  Checkbox(
+                    value: context.watch<ForageProvider>().isCurrentlyInSeason,
+                    onChanged: (bool? value) {
+                      context
+                          .read<ForageProvider>()
+                          .updateSeason(value ?? false);
+                    },
+                  ),
                   Text(
                     'Currently in season',
                     style: TextStyle(color: Colors.black),
@@ -66,6 +79,7 @@ class _FormsPageState extends State<FormsPage> {
               ),
               SizedBox(height: 10),
               TextField(
+                controller: context.watch<ForageProvider>().getNotesController,
                 decoration: InputDecoration(
                   labelText: 'Notes',
                   filled: true,
@@ -84,7 +98,16 @@ class _FormsPageState extends State<FormsPage> {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      // Add your action for the first button
+                      context.read<ForageProvider>().addItemToList();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Item added'),
+                        ),
+                      );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
@@ -99,6 +122,7 @@ class _FormsPageState extends State<FormsPage> {
                   ElevatedButton(
                     onPressed: () {
                       // Add your action for the second button
+                      context.read<ForageProvider>().clearControllers();
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
